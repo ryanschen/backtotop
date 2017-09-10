@@ -1,0 +1,1 @@
+define(["jquery"],function(e){function t(s){this.opts=e.extend({},t.DEFAULT_OPS,s),this.$el=e("html body")}return t.prototype.move=function(){var t=this.opts;e(window).scrollTop()==t.dest||this.$el.is(":animated")||this.$el.animate({scrollTop:t.dest},t.speed)},t.DEFAULT_OPS={dest:0,speed:800},t});

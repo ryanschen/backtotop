@@ -1,0 +1,1 @@
+require.config({paths:{jquery:"https://cdn.bootcss.com/jquery/3.2.1/jquery"}}),require(["jquery","backtop"],function(e,o){e("#backtop").backtop({pos:100,speed:2e3})});
