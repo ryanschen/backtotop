@@ -1,0 +1,95 @@
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+a{
+	text-decoration: none;
+	color:black;
+}
+@bcolor:red;
+@toolbar-size:52px;
+.div{
+	border: 1px solid @bcolor;
+	width:100px;
+	height:200px;
+}
+.toolbar{
+	position: fixed;
+	right:20px;
+	bottom:20px;
+}
+.toolbar-item{
+	position: relative;
+	display:block;
+	width:@toolbar-size;
+	height:@toolbar-size;
+	margin-top:1px;
+	&:hover{
+		.toolbar-icon{
+			top: - @toolbar-size;
+		}
+		.toolbar-text{
+			top:0;
+		}
+		.toolbar-layer{
+			opacity:1;
+			transition: 0.5s;
+			transform:scale(1);
+		}
+	}
+}
+.toolbar-btn{
+	position:absolute;
+	top:0;
+	left:0;
+	width:@toolbar-size;
+	height:@toolbar-size;
+	overflow:hidden;
+}
+.toolbar-icon{
+	position: absolute;
+	left:0;
+	top:0;
+	width:@toolbar-size;
+	height:@toolbar-size;
+	background-color: #d0d6d9;
+	font-size: 30px;
+	color:#fff;
+	text-align:center;
+	line-height:@toolbar-size;
+}
+.toolbar-text{
+	position: absolute;
+	left:0;
+	top:@toolbar-size;
+	width:@toolbar-size;
+	height:@toolbar-size;
+	background-color: #98a1a6;
+	font-size: 14px;
+	color:#fff;
+	text-align:center;
+	line-height:24px;
+	vertical-align: middle;
+	transition: 0.5s;
+}
+.toolbar-layer{
+	position: absolute;
+	right:@toolbar-size - 6;
+	bottom:-10px;
+	width:172px;
+	background: url(img/toolbar_img.png) no-repeat;
+	opacity:0;
+	transform-origin: 95% 95%;
+	transform:scale(0.01);
+}
+.toolbar-layer-weixin{
+	height:212px;
+	background-position:0 0;
+}
+.toolbar-layer-app{
+	height:194px;
+	background-position:0 -222px;
+}
+
+
